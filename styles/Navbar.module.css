@@ -1,0 +1,15 @@
+
+.mainnav ul li {
+    margin: 0 19px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.mainnav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 25px;
+    margin-top: 30px;
+}

@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <>
-
       <style jsx>
           {`
             h2{
@@ -26,17 +24,7 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <nav className={styles.mainnav}>
-          <ul>
-            <Link href='/' passHref><li>Home</li></Link>
-            <Link href='/about' passHref><li>About</li></Link>
-            <Link href='/blog' passHref><li>Blogs</li></Link>
-            <Link href='/contact' passHref><li>Contact</li></Link>
-          </ul>
-        </nav>
-
         <main className={styles.main}>
-
           <h1 className={styles.title}>
             Hunting Coders
           </h1>
@@ -56,7 +44,8 @@ export default function Home() {
           </p>
 
           <div className="blogs">
-            <h2>Popular blogs</h2>
+            <h2>Latest blogs</h2>
+            
             <div className="blogItem">
               <h3>How to learn JavaScript in 2022 ?</h3>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo.</p>
