@@ -3,6 +3,8 @@ import styles from '../styles/Blog.module.css'
 import Link from 'next/link'
 
 
+// Step 1: Collect all the files data from blogdata directory
+// Step 2: Iterate through the and display them
 const Blog = () => {
   return (
     <>
@@ -15,17 +17,6 @@ const Blog = () => {
             </Link>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo...</p>
           </div>
-
-          <div className={styles.blogItem}>
-            <h3>How to learn JavaScript in 2022 ?</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo...</p>
-          </div>
-
-          <div className={styles.blogItem}>
-            <h3>How to learn JavaScript in 2022 ?</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo...</p>
-          </div>
-
         </main>
       </div>
     </>
