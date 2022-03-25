@@ -12,6 +12,9 @@
     justify-content: flex-start;
     padding-top: 3rem;
 }
-.blogItem h3{
+.blogItems h3{
     cursor: pointer;
+}
+.blogItemP{
+    max-width: 45vw;
 }
