@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -30,13 +29,15 @@ export default function Home() {
           </h1>
 
           <div className={styles.imageWrapper}>
-            <Image
+            {/* We cant use next Image component when we are doing static site generation */}
+            {/* <Image
               src="/home.avif"
               alt='Home image here'
               width={237}
               height={158}
               className={styles.myImg}
-            />
+            /> */}
+            <img className={styles.myImg} src="/home.avif" width={237} height={158} alt='Home image here' />
           </div>
 
           <p className={styles.description}>
