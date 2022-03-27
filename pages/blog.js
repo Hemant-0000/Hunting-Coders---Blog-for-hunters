@@ -21,7 +21,7 @@ const Blog = (props) => {
               <Link passHref href={`/blogpost/${blogItem.slug}`}>
                 <h3>{blogItem.title}</h3>
               </Link>
-              <p className={styles.blogItemP}>{blogItem.content.substr(0, 120)}...</p>
+              <p className={styles.blogItemP}>{blogItem.metadesc.substr(0, 120)}...</p>
             </div>
           })}
 

@@ -6,6 +6,9 @@ import * as fs from 'fs';
 // Step 2: Populate them inside the page
 
 const Slug = (props) => {
+    function createMarkup(content) {
+        return { __html: content };
+    }
     const [blog, setBlog] = useState(props.myBlog)
 
     return (
@@ -14,9 +17,7 @@ const Slug = (props) => {
                 <main className={styles.main}>
                     <h1>{blog && blog.title}</h1>
                     <hr />
-                    <p>
-                        {blog && blog.content}
-                    </p>
+                    {blog && <p dangerouslySetInnerHTML={createMarkup(blog.content)}></p>}
                 </main>
             </div>
         </>
@@ -39,10 +40,10 @@ export async function getStaticProps(context) {
 
     let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8')
 
-        return {
-            props: { myBlog: JSON.parse(myBlog) } // will be passed to the page component as props
-        }
+    return {
+        props: { myBlog: JSON.parse(myBlog) } // will be passed to the page component as props
     }
+}
 
 // export async function getServerSideProps(context) {
 //     const { slug } = context.query
