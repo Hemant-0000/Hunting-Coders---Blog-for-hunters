@@ -13,9 +13,9 @@ const Contact = () => {
     e.preventDefault()
     console.log(name, email, phone, desc)
 
-    const data = { name, email, phone , desc };
+    const data = { name, email, phone, desc };
     fetch('http://localhost:3000/api/postcontact/', {
-      method: 'POST', 
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -52,31 +52,32 @@ const Contact = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.main}>
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit}>
+        <div className={styles.op}>
+          <div className={styles.mb3}>
+            <label htmlFor="name" className={styles.formLabel}>Name</label>
+            <input type="text" value={name} onChange={handleChange} className={styles.input} id="name" name='name' aria-describedby="name" /></div>
 
-        <div className={styles.mb3}>
-          <label htmlFor="name" className={styles.formLabel}>Name</label>
-          <input type="text" value={name} onChange={handleChange} className="form-control" id="name" name='name' aria-describedby="name" /></div>
+          <div className={styles.mb3}>
+            <label htmlFor="email" className={styles.formLabel}>Email</label>
+            <input type="email" value={email} className={styles.input} onChange={handleChange} id="email" name='email' aria-describedby="email" />
+            <div id="emailHelp" className={styles.input}>We will never share your email with anyone else.</div>
+          </div>
 
-        <div className={styles.mb3}>
-          <label htmlFor="email" className={styles.formLabel}>Email</label>
-          <input type="email" className="form-control" onChange={handleChange} id="email" name='email' aria-describedby="email" />
-          <div id="emailHelp" value={email} className="form-text">We will never share your email with anyone else.</div>
+          <div className={styles.mb3}>
+            <label htmlFor="phone" className={styles.formLabel}>Phone</label>
+            <input type="number" value={phone} onChange={handleChange} className={styles.input} id="phone" name='phone' />
+          </div>
+
+          <div className={styles.mb3}>
+            <label htmlFor="desc" className={styles.formLabel}>Description</label>
+            <textarea placeholder='write your concern here' value={desc} onChange={handleChange} className={styles.input} id="desc" name='desc' />
+          </div>
         </div>
 
-        <div className={styles.mb3}>
-          <label htmlFor="phone" className={styles.formLabel}>Phone</label>
-          <input type="number" value={phone} onChange={handleChange} className="form-control" id="phone" name='phone' />
-        </div>
-
-        <div className={styles.mb3}>
-          <label htmlFor="desc" className={styles.formLabel}>Description</label>
-          <textarea placeholder='write your concern here' value={desc} onChange={handleChange} className="form-control" id="desc" name='desc' />
-        </div>
-
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className={styles.submit}>Submit</button>
       </form>
     </div>
   )
