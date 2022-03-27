@@ -14,6 +14,9 @@
 }
 .blogItems h3{
     cursor: pointer;
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: 0;
 }
 .blogItemP{
     max-width: 45vw;

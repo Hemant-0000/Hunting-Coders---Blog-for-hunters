@@ -1,7 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../styles/Blog.module.css'
-import { useEffect } from 'react/cjs/react.development'
-import { useState } from 'react/cjs/react.development'
 import Link from 'next/link'
 
 
