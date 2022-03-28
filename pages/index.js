@@ -4,17 +4,6 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <>
-      <style jsx>
-          {`
-            h2{
-              font-size: 38px
-            }
-            h3{
-              font-size: 28px
-            }
-          `}
-      </style>
-
       <div className={styles.container}>
         <Head>
           <title>Hunting Coders</title>
@@ -24,10 +13,6 @@ export default function Home() {
         </Head>
 
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Hunting Coders
-          </h1>
-
           <div className={styles.imageWrapper}>
             {/* We cant use next Image component when we are doing static site generation */}
             {/* <Image
@@ -40,26 +25,29 @@ export default function Home() {
             <img className={styles.myImg} src="/home.avif" width={237} height={158} alt='Home image here' />
           </div>
 
-          <p className={styles.description}>
-            A blog for hunting coders by a hunting coder
-          </p>
+          <span className={styles.title}>
+            &lt;Hunting Coders/&gt;
+          </span>
 
           <div className="blogs">
-            <h2>Latest blogs</h2>
-            
+            <h2 className={styles.h2}>Latest blogs</h2>
+
             <div className="blogItem">
               <h3>How to learn JavaScript in 2022 ?</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo.</p>
+              <p className={styles.p}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, aut!</p>
+              <button className={styles.btn}>Read More</button>
             </div>
 
             <div className="blogItem">
               <h3>How to learn JavaScript in 2022 ?</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo.</p>
+              <p className={styles.p}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, aut!</p>
+              <button className={styles.btn}>Read More</button>
             </div>
 
             <div className="blogItem">
               <h3>How to learn JavaScript in 2022 ?</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo.</p>
+              <p className={styles.p}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam reiciendis distinctio explicabo Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, aut!.</p>
+              <button className={styles.btn}>Read More</button>
             </div>
 
           </div>

@@ -36,7 +36,10 @@
     margin: 0 20px;
     font-size: large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: bisque;
+    background-color: rgb(221, 213, 202);
     padding: 10px 8px;
     cursor: pointer;
+}
+.submit:hover{
+    background-color: bisque;
 }

@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .footer {
@@ -42,17 +42,15 @@
 
 .title {
   margin: 0;
+  padding-top: 20px;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 1.9rem;
+  font-weight: bold;
 }
 
 .title,
 .description {
   text-align: center;
-}
-
-.description {
-  font-size: 1.5rem;
 }
 
 .code {
@@ -115,10 +113,29 @@
 }
 
 .myImg{
-  border-radius: 12px
+  width: 157px;
+  border-radius: 92px
 }
 .imageWrapper{
-  padding-top: 22px;
+  padding-top: 15px;
   padding-bottom: 10px;
   margin-bottom: -15px;
+}
+.h2{
+  font-size: 2.5rem;
+}
+.btn{
+  color: white;
+  background-color: rgb(48, 44, 44);
+  padding: 5px 7px;
+  border-radius: 6px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: rgb(90, 86, 86);
+}
+.p{
+  margin: 10px 0;
+  margin-top: 3px;
 }

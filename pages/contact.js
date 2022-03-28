@@ -73,7 +73,7 @@ const Contact = () => {
 
           <div className={styles.mb3}>
             <label htmlFor="desc" className={styles.formLabel}>Description</label>
-            <textarea placeholder='write your concern here' value={desc} onChange={handleChange} className={styles.input} id="desc" name='desc' />
+            <textarea value={desc} onChange={handleChange} className={styles.input} id="desc" name='desc' />
           </div>
         </div>
 

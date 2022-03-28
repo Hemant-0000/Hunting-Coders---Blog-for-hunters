@@ -22,6 +22,7 @@ const Blog = (props) => {
                 <h3>{blogItem.title}</h3>
               </Link>
               <p className={styles.blogItemP}>{blogItem.content.substr(0, 120)}...</p>
+              <Link passHref href={`/blogpost/${blogItem.slug}`}><button className={styles.btn}>Read More</button></Link>
             </div>
           })}
 
